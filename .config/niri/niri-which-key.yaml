@@ -1,0 +1,35 @@
+# Theming
+font: JetBrainsMono Nerd Font 12
+background: "#3a3030d0"
+color: "#fbf1c7"
+border: "#f97502"
+separator: " ➜ "
+border_width: 4
+corner_r: 0
+padding: 20 
+
+# Anchor and margin
+anchor: bottom-right # One of center, left, right, top, bottom, bottom-left, top-left, etc.
+
+# Margins only relevant when anchor is not center
+margin_right: 30
+margin_bottom: 30
+margin_left: 0
+margin_top: 0
+
+menu: 
+  "Return":
+    desc: Spawn Alacritty
+    cmd: alacritty
+  "w":
+    desc: Monitor Actions
+    submenu:
+      "k": { desc: Monitor Up, cmd: niri msg action focus-monitor-up}
+      "j": { desc: Monitor Down, cmd: niri msg action focus-monitor-down}
+      "h": { desc: Monitor Left, cmd: niri msg action focus-monitor-left}
+      "l": { desc: Monitor Right, cmd: niri msg action focus-monitor-right}
+
+      "K": { desc: Move workspace Monitor Up, cmd: niri msg action move-workspace-to-monitor-up}
+      "J": { desc: Move workspace Monitor Down, cmd: niri msg action move-workspace-to-monitor-down}
+      "H": { desc: Move workspace Monitor Left, cmd: niri msg action move-workspace-to-monitor-left}
+      "L": { desc: Move workspace Monitor Right, cmd: niri msg action move-workspace-to-monitor-right}

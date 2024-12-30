@@ -1,0 +1,49 @@
+{  
+    // -------------------------------------------------------------------------
+    // Laptop Modules
+    // -------------------------------------------------------------------------
+
+    "battery": {
+        "interval": 2,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        //"format-icons": ["", ""],
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl s 5%-",
+        "on-scroll-up": "brightnessctl s +5%"
+    },
+
+    "temperature": {
+        // "thermal-zone": 1,
+        "interval": 4,
+        //"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": " {temperatureC}°C",
+        "format-critical": "  {temperatureC}°C",
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "max-length": 7,
+        "min-length": 7,
+        "on-click": "xsensors"
+    }
+}

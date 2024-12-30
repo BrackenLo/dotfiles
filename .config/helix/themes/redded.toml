@@ -1,0 +1,11 @@
+inherits = "yellowed"
+
+[palette]
+# yellow      = "#fc4444" # Red
+yellow      = "#fc2d2d" # Red
+purple      = "#ffd900"
+
+# syntax
+string      = "#fc750f" # Orange
+# keywords    = "#fc4444" # Red
+keywords    = "#fc2d2d" # Red

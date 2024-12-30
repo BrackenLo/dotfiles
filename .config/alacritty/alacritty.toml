@@ -1,0 +1,73 @@
+[general]
+import = [
+  "~/.config/alacritty/bindings.toml",
+  # "~/.config/alacritty/themes/catchy.toml",
+  "~/.config/alacritty/themes/dark_pride.toml"
+]
+
+live_config_reload = true
+working_directory = "None"
+
+[env]
+TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1"
+
+[window]
+dynamic_padding = true
+decorations = "full"
+# title = "Alacritty"
+opacity = 0.75
+decorations_theme_variant = "Dark"
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+# [window.class]
+# instance = "Alacritty"
+# general = "Alacritty"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 8
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.italic]
+family = "monospace"
+style = "Italic"
+
+[font.bold_italic]
+family = "monospace"
+style = "Bold Italic"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor]
+# style = "Underline"
+style = "Beam"
+vi_mode_style = "None"
+unfocused_hollow = true
+thickness = 0.15
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+

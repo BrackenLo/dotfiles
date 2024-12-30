@@ -1,0 +1,46 @@
+# theme = "horizon-dark"
+theme = "ayu_dark"
+# theme = "bogster"
+# theme = "carbonfox"
+
+# theme = "yellowed"
+# theme = "purpled"
+# theme = "redded"
+
+[editor]
+middle-click-paste = false
+bufferline = "multiple"
+cursorline = true
+# true-color = true
+# rulers = [80]
+auto-completion = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "|"
+render = true
+
+[editor.lsp]
+snippets = false
+
+# display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "separator", "version-control"]
+center = ["file-name"]
+
+[keys.normal]
+A-x = "extend_to_line_bounds"
+X = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.select]
+A-x = "extend_to_line_bounds"
+X = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.normal."space"]
+f = "file_picker_in_current_directory"
+F = "file_picker"

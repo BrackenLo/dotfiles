@@ -1,0 +1,78 @@
+{  
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "pulseaudio": {
+        "scroll-step": 3, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "amixer sset Master toggle"
+    },
+
+    "wireplumber": {
+        "on-click": "pavucontrol",
+        "on-click-right": "amixer sset Master toggle 1>/dev/null",
+        //on-click: "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        //on-scroll-down: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04+";
+        //on-scroll-up: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04-";
+        "format": "<span foreground='#fab387'>{icon}</span>  {volume}%",
+        "format-muted": " ",
+        "format-source": "",
+        "format-source-muted": "",
+        //"format-muted": "<span foreground='#fab387'> </span>",
+        //"format-icons": [ "<span foreground='#fab387'></span>" ]
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        },
+    },
+
+    "mpd": {
+        "max-length": 25,
+        "format": "<span foreground='#bb9af7'></span> {title}",
+        "format-paused": " {title}",
+        "format-stopped": "<span foreground='#bb9af7'></span>",
+        "format-disconnected": "",
+        "on-click": "mpc --quiet toggle",
+        "on-click-right": "mpc update; mpc ls | mpc add",
+        "on-click-middle": "alacritty -e ncmpcpp",
+        "on-scroll-up": "mpc --quiet prev",
+        "on-scroll-down": "mpc --quiet next",
+        "smooth-scrolling-threshold": 5,
+        "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
+    },
+
+    "custom/music": {
+        "format": "󰝚  {}",
+        "format-alt": "󰝚 ",
+        "format-alt-click": "click-right",
+        "escape": true,
+        "interval": 5,
+        "toolsip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+    },
+}

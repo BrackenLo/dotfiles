@@ -1,0 +1,80 @@
+// -------------------------------------------------------------------------
+// Niri configuration
+// -------------------------------------------------------------------------
+
+[{
+    "include": [
+        "~/.config/waybar/modules.jsonc",
+        "~/.config/waybar/modules-audio.jsonc",
+        "~/.config/waybar/modules-niri.jsonc",
+    ],
+
+    "output": ["DP-3"],
+    "layer": "top",
+    "position": "top",
+
+    //"height": 20,
+    "margin-left": 10,
+    "margin-bottom": 0,
+    "margin-right": 10,
+
+    // "spacing": 2, // Gaps between modules (4px)
+
+    "modules-left": [
+        "niri/workspaces",
+        "wlr/taskbar",
+        "niri/window"
+    ],
+    "modules-center": [
+        "custom/music"
+    ],
+    "modules-right": [
+        "custom/gpu-usage",
+        "idle_inhibitor",
+        "custom/pacman",
+        "wireplumber",
+        "clock#summary",
+        "custom/power",
+        "tray"
+    ],
+
+
+}, {
+    "include": [
+        "~/.config/waybar/modules.jsonc",
+        "~/.config/waybar/modules-audio.jsonc",
+        "~/.config/waybar/modules-niri.jsonc",
+    ],
+
+    "output": ["HDMI-A-1"],
+    "layer": "top",
+    "position": "top",
+
+    // "height": 20,
+    "margin-left": 10,
+    "margin-bottom": 0,
+    "margin-right": 10,
+
+    // "spacing": 3, // Gaps between modules (4px)
+
+    "modules-left": [
+        "niri/workspaces",
+        "wlr/taskbar",
+        "niri/window"
+    ],
+    "modules-center": [
+        "clock#single",
+        "clock#date",
+        "custom/weather"
+    ],
+    "modules-right": [
+        "custom/storage",
+        "memory",
+        "cpu",
+        "custom/gpu-usage",
+        "network",
+        "custom/screenshot_t",
+    ],
+
+}]
+

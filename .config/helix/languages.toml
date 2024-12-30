@@ -1,0 +1,29 @@
+[[language]]
+name = "toml"
+auto-format = true
+
+# [[language]]
+# name = "wgsl"
+# auto-format = true
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "\t" }
+language-servers = [ "clangd" ]
+auto-format = true
+
+[language-server.clangd]
+command = "clangd"
+args = ['--fallback-style=Webkit']
+# args = ['--fallback-style=Webkit', '--compile-commands-dir=build/']
+
+# args = ['--fallback-style=LLVM']
+# args = ['--fallback-style=Google',]
+# args = ['--fallback-style={BasedOnStyle: LLVM, IndentWidth: 4}',]
+# args = ['--fallback-style\="{BasedOnStyle: Google, IndentWidth: 4}"']
+# args = ['--fallback-style=\"{BasedOnStyle: Google, IndentWidth: 4}"']
+# args = ["--fallback-style={BasedOnStyle: Google, IndentWidth: 4}"]
