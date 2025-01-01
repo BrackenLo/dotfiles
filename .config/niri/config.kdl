@@ -4,11 +4,12 @@ spawn-at-startup "hypridle"
 spawn-at-startup "mako"
 spawn-at-startup "gammastep"
 spawn-at-startup "nm-applet --indicator"
-spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "/usr/lib/hyprpolkitagent"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "clipse -listen"
 
-spawn-at-startup "~/.config/niri/launch_swww.sh"
-spawn-at-startup "~/.config/niri/launch_waybar.sh"
+spawn-at-startup "~/.config/niri/scripts/launch_swww.sh"
+spawn-at-startup "~/.config/niri/scripts/launch_waybar.sh"
 
 // --------------------------------------------------
 
@@ -32,20 +33,20 @@ output "DP-3" {
     mode "1920x1080@74.973"
     scale 1
     transform "normal"
-    position x=0 y=1080
+    position x=0 y=0
 }
 
 output "HDMI-A-1" {
     mode "1920x1080@60.000"
     scale 1
     transform "normal"
-    position x=0 y=0
+    position x=0 y=-1080
 }
 
 // --------------------------------------------------
 
 layout {
-    gaps 16
+    gaps 14
 
     center-focused-column "never"
 
@@ -55,15 +56,12 @@ layout {
         proportion 0.33333
     }
 
-    // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
-    // preset-window-heights { }
-
     default-column-width { proportion 0.66666; }
 
     focus-ring {
         width 3
 
-        active-color "#7fc8ff"
+        // active-color "#7fc8ff"
         inactive-color "#380000"
 
         active-gradient from="#f97502" to="#fc0a0a" angle=180
@@ -80,6 +78,18 @@ layout {
 
     struts {
     }
+}
+
+window-rule {
+    match app-id="^Alacritty$"
+    match at-startup=true
+    default-column-width { proportion 0.33333; }
+}
+
+window-rule {
+    // match app-id="^steam$"
+    match title="^Friends List$"
+    default-column-width { proportion 0.33333; }
 }
 
 prefer-no-csd
@@ -120,17 +130,19 @@ binds {
     Mod+Return { spawn "wlr-which-key" "/home/bracken/.config/niri/niri-which-key.yaml"; }
     
     // Mod+Return { spawn "alacritty"; }
-    Mod+P { spawn "fuzzel"; }
-    Mod+Shift+P { spawn "fuzzel" "--show-actions"; }
+    Mod+P { spawn "/home/bracken/.cargo/bin/anyrun"; }
+    // Mod+Shift+P { spawn "fuzzel" "--show-actions"; }
     Super+Alt+L { spawn "hyprlock"; }
     Mod+N { spawn "thunar"; }
-    Mod+O { spawn "cachy-browser"; }
-    Mod+Shift+O { spawn "cachy-browser" "--private-window"; }
+    Mod+O { spawn "firefox"; }
+    Mod+Shift+O { spawn "firefox" "--private-window"; }
 
 
     // Volume keys mappings for PipeWire & WirePlumber.
-    XF86AudioLowerVolume allow-when-locked=true { spawn "pamixer" "-ud" "2"; }
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "pamixer" "-ui" "2"; }
+    // XF86AudioLowerVolume allow-when-locked=true { spawn "pamixer" "-ud" "2"; }
+    // XF86AudioRaiseVolume allow-when-locked=true { spawn "pamixer" "-ui" "2"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
@@ -292,13 +304,14 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Print      { screenshot; }
     Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Alt+Print  { screenshot-window; }
 
-    // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
+    Mod+Y        { toggle-window-floating; }
+    Mod+Shift+Y  { switch-focus-between-floating-and-tiling; }
+
+    // Mod+Shift+E { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
@@ -308,4 +321,7 @@ binds {
 environment {
 	DISPLAY ":0"
     // ELECTRON_OZONE_PLATFORM_HINT "wayland"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    TERM "alacritty"
+    EDITOR "helix"
 }

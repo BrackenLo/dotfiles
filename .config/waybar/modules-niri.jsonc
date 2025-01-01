@@ -5,13 +5,30 @@
     
     "niri/workspaces": {
         "format": "{icon}",
+        // "format-icons": {
+        //     "default": "󰊠 ",
+        //     "active": "󰊠 ",
+        //     "focused": "󰮯 ",            
+        // },
         "format-icons": {
-            "active": "",
-            "default": ""
-        }
+            "1": "󰣑",
+            "2": "󰣏",
+            "3": "󰣎",
+            "4": "",
+
+            "5": "󱢰",
+            "6": "󱢨",
+            "7": "󱢤",
+            "8": "󱢬",
+        },
     },  
 
     "niri/window": {
-        "format": "{}",
+        "format": "{title}",
+        // "format": "{app_id} - {title}",
+        "separate-outputs": true,
+        "max-length": 45,
+        "icon": true,
+        "icon-size": 15,
     },
 }

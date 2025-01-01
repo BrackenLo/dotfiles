@@ -7,6 +7,7 @@
         "~/.config/waybar/modules.jsonc",
         "~/.config/waybar/modules-audio.jsonc",
         "~/.config/waybar/modules-niri.jsonc",
+        "~/.config/waybar/modules-custom.jsonc",
     ],
 
     "output": ["DP-3"],
@@ -22,19 +23,17 @@
 
     "modules-left": [
         "niri/workspaces",
-        "wlr/taskbar",
         "niri/window"
     ],
     "modules-center": [
-        "custom/music"
+        "clock",
     ],
     "modules-right": [
-        "custom/gpu-usage",
-        "idle_inhibitor",
         "custom/pacman",
+        "idle_inhibitor",
         "wireplumber",
-        "clock#summary",
-        "custom/power",
+        "custom/music",
+        "custom/caway",
         "tray"
     ],
 
@@ -59,13 +58,9 @@
 
     "modules-left": [
         "niri/workspaces",
-        "wlr/taskbar",
         "niri/window"
     ],
     "modules-center": [
-        "clock#single",
-        "clock#date",
-        "custom/weather"
     ],
     "modules-right": [
         "custom/storage",
@@ -73,7 +68,8 @@
         "cpu",
         "custom/gpu-usage",
         "network",
-        "custom/screenshot_t",
+        "tray"
+        // "custom/screenshot_t",
     ],
 
 }]

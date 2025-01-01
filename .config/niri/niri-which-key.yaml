@@ -18,18 +18,46 @@ margin_left: 0
 margin_top: 0
 
 menu: 
-  "Return":
-    desc: Spawn Alacritty
-    cmd: alacritty
-  "w":
-    desc: Monitor Actions
-    submenu:
-      "k": { desc: Monitor Up, cmd: niri msg action focus-monitor-up}
-      "j": { desc: Monitor Down, cmd: niri msg action focus-monitor-down}
-      "h": { desc: Monitor Left, cmd: niri msg action focus-monitor-left}
-      "l": { desc: Monitor Right, cmd: niri msg action focus-monitor-right}
+    "Return":
+        desc: Spawn Alacritty
+        cmd: alacritty
+    "w":
+        desc: Monitor Actions
+        submenu:
+          # "k": { desc: Monitor Up, cmd: niri msg action focus-monitor-up}
+          # "j": { desc: Monitor Down, cmd: niri msg action focus-monitor-down}
+          # "h": { desc: Monitor Left, cmd: niri msg action focus-monitor-left}
+          # "l": { desc: Monitor Right, cmd: niri msg action focus-monitor-right}
 
-      "K": { desc: Move workspace Monitor Up, cmd: niri msg action move-workspace-to-monitor-up}
-      "J": { desc: Move workspace Monitor Down, cmd: niri msg action move-workspace-to-monitor-down}
-      "H": { desc: Move workspace Monitor Left, cmd: niri msg action move-workspace-to-monitor-left}
-      "L": { desc: Move workspace Monitor Right, cmd: niri msg action move-workspace-to-monitor-right}
+          "k": { desc: Move workspace Monitor Up, cmd: niri msg action move-workspace-to-monitor-up}
+          "j": { desc: Move workspace Monitor Down, cmd: niri msg action move-workspace-to-monitor-down}
+          "h": { desc: Move workspace Monitor Left, cmd: niri msg action move-workspace-to-monitor-left}
+          "l": { desc: Move workspace Monitor Right, cmd: niri msg action move-workspace-to-monitor-right}
+    "e":
+        desc: Power Options
+        submenu:
+            "1":
+                desc: Lock
+                cmd: hyprlock 
+            "2":
+                desc: Suspend
+                submenu: 
+                    "Return": { desc: Confirm, cmd: systemctl suspend }
+            "3":
+                desc: Log Out
+                cmd: niri msg action quit
+            "4":
+                desc: Reboot
+                submenu: 
+                    "Return": { desc: Confirm, cmd: systemctl reboot }
+            "5":
+                desc: Reboot to UEFI
+                submenu: 
+                    "Return": { desc: Confirm, cmd: systemctl reboot --firmware-setup }
+            "6":
+                desc: Shutdown
+                submenu: 
+                    "Return": { desc: Confirm, cmd: systemctl poweroff }
+    "p":
+        desc: Power off monitors
+        cmd: niri msg action power-off-monitors
