@@ -131,8 +131,8 @@ binds {
     
     // Mod+Return { spawn "alacritty"; }
     Mod+P { spawn "/home/bracken/.cargo/bin/anyrun"; }
+    // Mod+P { spawn "walker" "--modules" "applications,ssh"; }
     // Mod+Shift+P { spawn "fuzzel" "--show-actions"; }
-    Super+Alt+L { spawn "hyprlock"; }
     Mod+N { spawn "thunar"; }
     Mod+O { spawn "firefox"; }
     Mod+Shift+O { spawn "firefox" "--private-window"; }
@@ -308,8 +308,8 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Alt+Print  { screenshot-window; }
 
-    Mod+Y        { toggle-window-floating; }
-    Mod+Shift+Y  { switch-focus-between-floating-and-tiling; }
+    Mod+Y  { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+Y        { toggle-window-floating; }
 
     // Mod+Shift+E { quit; }
 
@@ -324,4 +324,8 @@ environment {
     QT_QPA_PLATFORMTHEME "gtk3"
     TERM "alacritty"
     EDITOR "helix"
+}
+
+hotkey-overlay {
+    skip-at-startup
 }

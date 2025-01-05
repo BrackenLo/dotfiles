@@ -33,7 +33,9 @@
         "idle_inhibitor",
         "wireplumber",
         "custom/music",
-        "custom/caway",
+        // "custom/caway",
+        "custom/cava-internal",
+        // "cava",
         "tray"
     ],
 

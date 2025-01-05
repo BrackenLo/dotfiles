@@ -60,6 +60,7 @@ button:hover {
 #wireplumber,
 #workspaces,
 #custom-caway,
+#custom-cava-internal,
 #custom-music,
 #custom-pacman,
 #custom-storage
@@ -119,4 +120,8 @@ button:hover {
 #network.disconnected {
     color: #f53c3c;
 }
+
+#custom-caway.Playing {}
+#custom-caway.Paused {}
+#custom-caway.Stopped {}
 

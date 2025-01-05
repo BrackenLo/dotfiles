@@ -51,8 +51,8 @@
 
     "custom/music": {
         "format": "󰝚  {}",
-        // "format-alt": "󰝚 ",
-        // "format-alt-click": "click-right",
+        "format-alt": "󰝚 ",
+        "format-alt-click": "click-middle",
         "escape": true,
         "interval": 5,
         "toolsip": false,

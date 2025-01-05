@@ -91,6 +91,8 @@ while read -r line; do
 
     # echo "$line" | jq --unbuffered --compact-output
 
+    # echo "$line" | jq --arg 
+
     # If the class says "Playing" and equilizer is enabled
     # then show the cava equilizer
     if [[ $EQUILIZER == 1 && $(echo $line | jq -r '.class') == 'Playing' ]]; then

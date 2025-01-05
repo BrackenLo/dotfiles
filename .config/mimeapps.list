@@ -1,0 +1,15 @@
+[Added Associations]
+image/png=swayimg.desktop;
+text/plain=codium-wayland.desktop;codium.desktop;helix.desktop;
+application/x-theme=codium.desktop;
+font/ttf=codium.desktop;
+application/x-zerosize=codium.desktop;
+application/octet-stream=codium.desktop;
+image/webp=swayimg.desktop;
+text/html=codium.desktop;helix.desktop;userapp-firefox --private-browsing-US9PZ2.desktop;
+
+[Default Applications]
+inode/directory=thunar.desktop
+font/ttf=codium.desktop
+application/x-zerosize=codium.desktop
+application/octet-stream=codium.desktop

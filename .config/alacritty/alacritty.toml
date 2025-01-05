@@ -9,8 +9,11 @@ live_config_reload = true
 working_directory = "None"
 
 [env]
-TERM = "xterm-256color"
+# TERM = "xterm-256color"
 WINIT_X11_SCALE_FACTOR = "1"
+
+[terminal]
+shell = "/usr/bin/fish"
 
 [window]
 dynamic_padding = true

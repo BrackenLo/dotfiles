@@ -1,0 +1,27 @@
+Alacritty
+Helix
+Firefox
+Thunar
+Ranger
+VsCodium
+Disks
+GtkSettings
+Qt6 settings
+htop
+btm
+mpv media player
+obsidian
+xarchiver
+
+Fish
+
+anyrun
+hypridle
+GammaStep
+mako
+nm-applet
+hyprpolkitagent
+xwayland-satellite
+clipse
+swww
+wlr-which-key
