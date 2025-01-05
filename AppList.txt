@@ -1,3 +1,5 @@
+paru
+
 Alacritty
 Helix
 Firefox
@@ -12,8 +14,13 @@ btm
 mpv media player
 obsidian
 xarchiver
+ncspot
+gitui
+yt-dlp
 
 Fish
+rustup
+rust-analyser
 
 anyrun
 hypridle
@@ -25,3 +32,7 @@ xwayland-satellite
 clipse
 swww
 wlr-which-key
+starship
+
+misfortune
+lolcat
