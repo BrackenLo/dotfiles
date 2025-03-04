@@ -6,7 +6,7 @@
 	<submenu></submenu>
 	<unique-id>1735604079977506-1</unique-id>
 	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Example for a custom action</description>
+	<description></description>
 	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
@@ -23,5 +23,49 @@
 	<patterns>*.html</patterns>
 	<other-files/>
 	<text-files/>
+</action>
+<action>
+	<icon>helix</icon>
+	<name>Open Helix Here</name>
+	<submenu></submenu>
+	<unique-id>1736859298641462-1</unique-id>
+	<command>alacritty --working-directory %f --command helix ./</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>preferences-git</icon>
+	<name>Open Gitui Here</name>
+	<submenu></submenu>
+	<unique-id>1736962424249193-1</unique-id>
+	<command>alacritty --working-directory %f --command gitui</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>vscodium-Wayland</icon>
+	<name>Open VsCodium Here</name>
+	<submenu></submenu>
+	<unique-id>1739240067739525-1</unique-id>
+	<command>vscodium %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>disk-usage-analyzer</icon>
+	<name>Open Filelight here</name>
+	<submenu></submenu>
+	<unique-id>1740233584728366-1</unique-id>
+	<command>filelight %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
 </action>
 </actions>

@@ -1,8 +1,18 @@
 [general]
 import = [
   "~/.config/alacritty/bindings.toml",
-  # "~/.config/alacritty/themes/catchy.toml",
-  "~/.config/alacritty/themes/dark_pride.toml"
+  # "~/.config/alacritty/themes/alabaster_dark.toml",
+  # "~/.config/alacritty/themes/aura.toml",
+  # "~/.config/alacritty/themes/ayu_dark.toml",
+  # "~/.config/alacritty/themes/carbonfox.toml",
+  # "~/.config/alacritty/themes/citylights.toml"
+  # "~/.config/alacritty/themes/dark_pride.toml"
+  # "~/.config/alacritty/themes/github_dark_colorblind.toml",
+  # "~/.config/alacritty/themes/gotham.toml",
+  # "~/.config/alacritty/themes/horizon_dark.toml",
+  "~/.config/alacritty/themes/monokai_charcoal.toml"
+  # "~/.config/alacritty/themes/seashell.toml"
+  # "~/.config/alacritty/themes/tender.toml",
 ]
 
 live_config_reload = true

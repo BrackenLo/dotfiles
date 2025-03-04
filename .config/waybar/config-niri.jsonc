@@ -45,6 +45,7 @@
         "~/.config/waybar/modules.jsonc",
         "~/.config/waybar/modules-audio.jsonc",
         "~/.config/waybar/modules-niri.jsonc",
+        "~/.config/waybar/modules-custom.jsonc",
     ],
 
     "output": ["HDMI-A-1"],

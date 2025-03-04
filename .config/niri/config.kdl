@@ -4,7 +4,8 @@ spawn-at-startup "hypridle"
 spawn-at-startup "mako"
 spawn-at-startup "gammastep"
 spawn-at-startup "nm-applet --indicator"
-spawn-at-startup "/usr/lib/hyprpolkitagent"
+// spawn-at-startup "/usr/lib/hyprpolkitagent"
+spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "clipse -listen"
 
@@ -20,11 +21,6 @@ input {
         }
     }
 
-    touchpad {
-        tap
-        natural-scroll
-    }   
-
     mouse {
     }
 
@@ -38,14 +34,14 @@ output "DP-3" {
     mode "1920x1080@74.973"
     scale 1
     transform "normal"
-    position x=0 y=0
+    position x=0 y=1080
 }
 
 output "HDMI-A-1" {
     mode "1920x1080@60.000"
     scale 1
     transform "normal"
-    position x=0 y=-1080
+    position x=0 y=0
 }
 
 // --------------------------------------------------
@@ -87,7 +83,6 @@ layout {
 
 window-rule {
     match app-id="^Alacritty$"
-    match at-startup=true
     default-column-width { proportion 0.33333; }
 }
 
@@ -95,6 +90,11 @@ window-rule {
     // match app-id="^steam$"
     match title="^Friends List$"
     default-column-width { proportion 0.33333; }
+}
+
+window-rule {
+    match  title="^notificationtoasts"
+    default-floating-position x=1900 y=1060
 }
 
 prefer-no-csd
@@ -139,8 +139,8 @@ binds {
     // Mod+P { spawn "walker" "--modules" "applications,ssh"; }
     // Mod+Shift+P { spawn "fuzzel" "--show-actions"; }
     Mod+N { spawn "thunar"; }
-    Mod+O { spawn "firefox"; }
-    Mod+Shift+O { spawn "firefox" "--private-window"; }
+    Mod+O { spawn "zen-browser"; }
+    Mod+Shift+O { spawn "zen-browser" "--private-window"; }
 
 
     // Volume keys mappings for PipeWire & WirePlumber.
@@ -326,7 +326,8 @@ binds {
 environment {
 	DISPLAY ":0"
     // ELECTRON_OZONE_PLATFORM_HINT "wayland"
-    QT_QPA_PLATFORMTHEME "gtk3"
+    // QT_QPA_PLATFORMTHEME "gtk3"
+    QT_QPA_PLATFORMTHEME "qt6ct"
     TERM "alacritty"
     EDITOR "helix"
 }

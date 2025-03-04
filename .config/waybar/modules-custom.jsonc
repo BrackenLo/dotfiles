@@ -46,5 +46,13 @@
         "on-scroll-down": "playerctl next",
         "on-click-right": "g4music",
         "max-length": 35
-    }    
+    },
+
+    "custom/gpu-usage": {
+      "format": "󰣗  {}",
+      // "format-icons": "󰣗",
+      "exec": "gpu-usage-waybar",
+      "return-type": "json",
+      "on-click": "alacritty -e nvtop",
+    }
 }

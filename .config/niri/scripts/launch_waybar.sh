@@ -1,2 +1,3 @@
 #!/bin/bash
-waybar -c ~/.config/waybar/config-niri.jsonc
+# waybar -l trace -c ~/.config/waybar/config-niri.jsonc > ~/Documents/waylog.txt
+waybar -c ~/.config/waybar/config-niri.jsonc 

@@ -19,8 +19,6 @@ export SWWW_TRANSITION_STEP=2
 # This controls (in seconds) when to switch to the next image
 INTERVAL=180
 
-trap "fyi swww_randomize swww_randomize has closed. && exit" SIGINT SIGTERM EXIT
-
 while true; do
 	find "$1" -type f \
 		| while read -r img; do

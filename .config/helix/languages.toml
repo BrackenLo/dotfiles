@@ -7,6 +7,19 @@ auto-format = true
 # auto-format = true
 
 [[language]]
+name = "rhai"
+scope = "source.rhai"
+file-types = ["rhai"]
+comment-tokens = "//"
+# formatter = { command = "rhai", args = ["fmt"] }
+# auto-format = false
+language-servers = ["rhai-lsp"]
+
+[language-server.rhai-lsp]
+command = "rhai"
+args =["lsp", "stdio", "colors", "--always"]
+
+[[language]]
 name = "c"
 indent = { tab-width = 4, unit = "    " }
 

@@ -4,6 +4,10 @@ key = "Return"
 mods = "Control"
 action = "CreateNewWindow"
 
+[[keyboard.bindings]]
+key = "N"
+mods = "Alt"
+command = "thunar"
 
 [[keyboard.bindings]]
 key = "Paste"
@@ -78,3 +82,4 @@ action = "ClearSelection"
 key = "Key0"
 mods = "Control"
 action = "ResetFontSize"
+

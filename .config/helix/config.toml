@@ -1,7 +1,7 @@
 # theme = "horizon-dark"
-theme = "ayu_dark"
+# theme = "ayu_dark"
 # theme = "bogster"
-# theme = "carbonfox"
+theme = "carbonfox"
 
 # theme = "yellowed"
 # theme = "purpled"
@@ -11,8 +11,9 @@ theme = "ayu_dark"
 middle-click-paste = false
 bufferline = "multiple"
 cursorline = true
+continue-comments = false
 # true-color = true
-# rulers = [80]
+rulers = [120]
 auto-completion = true
 
 [editor.cursor-shape]
